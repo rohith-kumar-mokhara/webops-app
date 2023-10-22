@@ -5,10 +5,11 @@
     position: relative;
     height: 300px;
     width: 15%;
-    background-color: rgb(204, 187, 162);
+    background-color:  var(--card_bg_color);
     border-radius: 15px;
     margin: 30px;
     transition: transform 1s ease;
+    color: var(--card_text_color);
 }
 
 .Fav-Heading-joke{
@@ -36,10 +37,11 @@
 .Fav-Card-item-quote{
     height: 300px;
     width: 15%;
-    background-color: rgb(204, 187, 162);
+    background-color:  var(--card_bg_color);
     border-radius: 15px;
     margin: 30px;
     transition: transform 1s ease;
+    color: var(--card_text_color);
 }
 
 .Fav-Card-content-quote .Fav-quote-say {
