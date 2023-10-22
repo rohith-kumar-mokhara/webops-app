@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,500&display=swap');
+
+.Card-item-joke {
+    position: relative;
+    height: 300px;
+    width: 15%;
+    background-color: var(--card_bg_color);
+    border-radius: 15px;
+    margin: 30px;
+    transition: transform 1s ease;
+    color: var(--card_text_color);
+}
+.Card-item-quote {
+    position: relative;
+    height: 300px;
+    width: 15%;
+    background-color: var(--card_bg_color);
+    opacity:0.52;
+    border-radius: 15px;
+    margin: 30px;
+    transition: transform 1s ease;
+    color: var(--card_text_color);
+}
+.Heading-joke {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+
+.Card-content-joke .joke-say {
+    font-family: 'Tilt Neon', sans-serif;
+    margin: 20px 13px 20px 15px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+.Card-content-joke .setup {
+    font-family: 'Tilt Neon', sans-serif;
+    margin: 20px 13px 20px 15px;
+}
+
+.Card-content-joke .punchline {
+    font-family: 'Tilt Neon', sans-serif;
+    margin: 20px 13px 20px 15px;
+}
+
+.Card-content-quote .quote-say {
+    font-family: 'Tilt Neon', sans-serif;
+    transform: rotateY(180deg);
+    margin: 20px 13px 20px 15px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+.Card-content-quote .content {
+    font-family: 'Tilt Neon', sans-serif;
+    transform: rotateY(180deg);
+    margin: 20px 13px 20px 15px;
+}
+
+.Card-content-quote .author {
+    font-family: 'Tilt Neon', sans-serif;
+    transform: rotateY(180deg);
+    margin: 20px 13px 20px 15px;
+    font-weight: 600;
+}
+
+button {
+    background-color: rgb(46, 95, 169);
+    z-index: 5;
+    height: 30px;
+    width: 80px;
+    position: absolute;
+    padding: 5px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}
+
+.like {
+    font-family: 'Tilt Neon', sans-serif;
+    top: 83%;
+    left: 10%;
+    color: white;
+}
+
+i {
+    cursor: pointer;
+    padding-right: 10px;
+    color: white;
+}
+
+.quote {
+    left: 55%;
+    transform: rotateY(180deg);
+}
+
+.added-to-fav {
+    font-family: 'Ubuntu', sans-serif;
+    position: absolute;
+    top: 83%;
+    left: 10%;
+}
+
+.fa-check {
+    padding-left: 10px;
+    color: rgb(106, 156, 137);
+    size: 100px;
+}
+
+.fav-quote{
+    transform: rotateY(180deg);
+}
+
+@media screen and (max-width:1400px) {
+  .Card-item-joke{
+        width: 20%;
+  }
+
+  .Card-item-quote{
+        width: 20%;
+  }
+}
+@media screen and (max-width:1200px) {
+    .Card-item-joke{
+        width: 25%;
+    }
+    
+    .Card-item-quote{
+        width: 25%;
+    }
+}
+@media screen and (max-width:800px) {
+  .Card-item-joke{
+        width: 40%;
+  }
+
+  .Card-item-quote{
+        width: 40%;
+  }
+}
+@media screen and (max-width:400px) {
+  .Card-item-joke{
+        width: 50%;
+  }
+
+  .Card-item-quote{
+        width: 50%;
+  }
+  .Heading-joke{
+    font-size: 15px;
+  }
+}
