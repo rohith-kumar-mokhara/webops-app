@@ -9,8 +9,8 @@ function Favourites() {
     const [favCardQuote, setFavCardQuotes] = useState([]);
 
     useEffect(() => {
-        const prevFavJokes = JSON.parse(localStorage.getItem('favCardJokes')) || [];
-        const prevFavQuotes = JSON.parse(localStorage.getItem('favCardQuotes')) || [];
+        const prevFavJokes = JSON.parse(sessionStorage.getItem('favCardJokes')) || [];
+        const prevFavQuotes = JSON.parse(sessionStorage.getItem('favCardQuotes')) || [];
         setFavCardJokes(prevFavJokes);
         setFavCardQuotes(prevFavQuotes);
     }, []);
@@ -18,30 +18,20 @@ function Favourites() {
     useEffect(()=>{ 
         for(let i=0;i<arr.length;i++){
             setFavCardJokes((prevValue)=>{
-                console.log(arr[i].data1)
                 return [...prevValue,arr[i].data1];
             })
         }
         for(let i=0;i<arr.length;i++){
             setFavCardQuotes((prevValue)=>{
-                console.log(arr[i].data1)
                 return [...prevValue,arr[i].data2];
             })
         }
     },[])
 
     useEffect(() => {
-        localStorage.setItem('favCardJokes', JSON.stringify(favCardJoke));
-        localStorage.setItem('favCardQuotes', JSON.stringify(favCardQuote));
+        sessionStorage.setItem('favCardJokes', JSON.stringify(favCardJoke));
+        sessionStorage.setItem('favCardQuotes', JSON.stringify(favCardQuote));
     }, [favCardJoke, favCardQuote]);
-
-    useEffect(() => {
-        function clearLocalStorage(){
-            localStorage.clear();
-        };
-
-        window.addEventListener('beforeunload', clearLocalStorage);
-    }, []);
 
     return (
         <div className='container'>
